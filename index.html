@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="theme-color" content="#667eea">
+    <meta name="description" content="24/7 AC and Washing Machine Repair Service - Call our expert technicians now">
     <title>Home Appliance Service</title>
     <style>
         * {
@@ -93,17 +95,27 @@
             font-size: 0.9em;
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
             .container {
-                padding: 25px;
+                padding: 30px 20px;
+                border-radius: 15px;
             }
 
             h1 {
-                font-size: 1.5em;
+                font-size: 1.6em;
+            }
+
+            .subtitle {
+                font-size: 1em;
+                margin-bottom: 30px;
             }
 
             .service-card {
-                padding: 20px;
+                padding: 25px 20px;
             }
 
             .service-icon {
@@ -111,7 +123,93 @@
             }
 
             .service-info h2 {
+                font-size: 1.3em;
+            }
+
+            .service-info p {
+                font-size: 0.85em;
+            }
+
+            .footer {
+                font-size: 0.85em;
+                margin-top: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                padding: 25px 15px;
+                border-radius: 12px;
+            }
+
+            h1 {
+                font-size: 1.4em;
+                margin-bottom: 8px;
+            }
+
+            .subtitle {
+                font-size: 0.9em;
+                margin-bottom: 25px;
+            }
+
+            .services {
+                gap: 15px;
+            }
+
+            .service-card {
+                padding: 20px 15px;
+                gap: 15px;
+                border-radius: 12px;
+            }
+
+            .service-icon {
+                font-size: 2.2em;
+            }
+
+            .service-info h2 {
+                font-size: 1.1em;
+                margin-bottom: 3px;
+            }
+
+            .service-info p {
+                font-size: 0.8em;
+            }
+
+            .footer {
+                font-size: 0.8em;
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .container {
+                padding: 20px 12px;
+            }
+
+            h1 {
                 font-size: 1.2em;
+            }
+
+            .service-card {
+                padding: 18px 12px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .service-icon {
+                font-size: 2em;
+            }
+
+            .service-info h2 {
+                font-size: 1em;
+            }
+
+            .service-info p {
+                font-size: 0.75em;
             }
         }
     </style>
