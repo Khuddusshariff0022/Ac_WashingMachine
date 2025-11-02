@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Appliance Service</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2em;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+
+        .services {
+            display: grid;
+            gap: 20px;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card:active {
+            transform: translateY(-2px);
+        }
+
+        .service-icon {
+            font-size: 3em;
+            flex-shrink: 0;
+        }
+
+        .service-info h2 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .service-info p {
+            opacity: 0.9;
+            font-size: 0.9em;
+        }
+
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .service-card {
+                padding: 20px;
+            }
+
+            .service-icon {
+                font-size: 2.5em;
+            }
+
+            .service-info h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔧 Home Appliance Service</h1>
+        <p class="subtitle">24/7 Expert Repair & Maintenance</p>
+
+        <div class="services">
+            <a href="#" class="service-card" id="acService">
+                <div class="service-icon">❄️</div>
+                <div class="service-info">
+                    <h2>AC Service</h2>
+                    <p>Installation, Repair & Maintenance</p>
+                </div>
+            </a>
+
+            <a href="#" class="service-card" id="washingService">
+                <div class="service-icon">🌀</div>
+                <div class="service-info">
+                    <h2>Washing Machine Service</h2>
+                    <p>All Brands Repair & Service</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="footer">
+            📞 Click on any service to call our expert technicians
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            if (typeof CONFIG !== 'undefined') {
+                document.title = CONFIG.siteName;
+                document.querySelector('h1').textContent = '🔧 ' + CONFIG.siteName;
+                document.getElementById('acService').href = `tel:${CONFIG.acPhone}`;
+                document.getElementById('washingService').href = `tel:${CONFIG.washingPhone}`;
+                console.log('Configuration loaded successfully');
+            } else {
+                console.error('Configuration file not found. Please create config.js');
+            }
+        });
+    </script>
+</body>
+</html>
